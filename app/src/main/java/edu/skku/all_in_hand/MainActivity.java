@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private Context mContext;
 
-    private FloatingActionButton fab_main, fab_sub1;
+    private FloatingActionButton fab_main, fab_sub1, fab_select;
     private Animation fab_open, fab_close;
     private boolean isFabOpen = false;
 
@@ -106,13 +106,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         fab_main = (FloatingActionButton) findViewById(R.id.fab_main);
         fab_sub1 = (FloatingActionButton) findViewById(R.id.fab_sub1);
+        fab_select = (FloatingActionButton) findViewById(R.id.select);
 
         fab_main.setOnClickListener(this);
         fab_sub1.setOnClickListener(this);
 
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON,
                 WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
-
 
         mLayout = findViewById(R.id.layout_main);
 
@@ -121,37 +121,35 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 .setInterval(UPDATE_INTERVAL_MS)
                 .setFastestInterval(FASTEST_UPDATE_INTERVAL_MS);
 
-
         LocationSettingsRequest.Builder builder =
                 new LocationSettingsRequest.Builder();
 
         builder.addLocationRequest(locationRequest);
 
-
         mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
-
 
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+
 
         /*
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync((OnMapReadyCallback) this);
 
-
-        testbutton = (Button) findViewById(R.id.test_store);
-       testbutton.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view) {
-                Intent selectMenu = new Intent(MainActivity.this, ShowStoreInfoActivity.class);
-                //나중에 여기에 selectMenu.putExtra("store_id", store_id);
-                startActivity(selectMenu);
-            }
-        });
         */
 
+
+
+        fab_select.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, ShowStoreInfoActivity.class);
+                intent.putExtra("store_id", 2);
+                startActivity(intent);
+            }
+        });
     }
 
     public void onMapReady(final GoogleMap googleMap) {
@@ -223,6 +221,49 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 //현재 위치에 마커 생성하고 이동
                 //setCurrentLocation(location, markerTitle, markerSnippet);
                 mCurrentLocatiion = location;
+
+                LatLng Store1 = new LatLng(37.49322, 127.0788);
+                MarkerOptions markerOptions1 = new MarkerOptions();
+                markerOptions1.position(Store1);
+                markerOptions1.title("백암왕순대");
+                markerOptions1.snippet("24시간 순대국밥");
+                mMap.addMarker(markerOptions1);
+
+                LatLng Store2 = new LatLng(37.493, 127.08);
+                MarkerOptions markerOptions2 = new MarkerOptions();
+                markerOptions2.position(Store2);
+                markerOptions2.title("깐부치킨");
+                markerOptions2.snippet("바삭바삭 치킨 맛집");
+                mMap.addMarker(markerOptions2);
+
+                LatLng Store3 = new LatLng(37.489, 127.09);
+                MarkerOptions markerOptions3 = new MarkerOptions();
+                markerOptions3.position(Store3);
+                markerOptions3.title("청년밥상");
+                markerOptions3.snippet("집밥이 그리울 때, 된장찌개 전문");
+                mMap.addMarker(markerOptions3);
+
+                LatLng Store4 = new LatLng(37.491, 127.081);
+                MarkerOptions markerOptions4 = new MarkerOptions();
+                markerOptions4.position(Store4);
+                markerOptions4.title("오복미역");
+                markerOptions4.snippet("해산물 미역국 #몸보신");
+                mMap.addMarker(markerOptions4);
+
+                LatLng Store5 = new LatLng(37.491, 127.081);
+                MarkerOptions markerOptions5 = new MarkerOptions();
+                markerOptions5.position(Store5);
+                markerOptions5.title("TEST");
+                markerOptions5.snippet("STORE DESC");
+                mMap.addMarker(markerOptions5);
+
+
+                LatLng Store6 = new LatLng(37.4918, 127.083);
+                MarkerOptions markerOptions6 = new MarkerOptions();
+                markerOptions6.position(Store6);
+                markerOptions6.title("TEST1");
+                markerOptions6.snippet("STORE DESC1");
+                mMap.addMarker(markerOptions6);
             }
         }
     };
@@ -335,7 +376,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         markerOptions.snippet(markerSnippet);
         markerOptions.draggable(true);
         markerOptions.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED));
-        currentMarker = mMap.addMarker(markerOptions);
+        //currentMarker = mMap.addMarker(markerOptions);
 
         CameraUpdate cameraUpdate = CameraUpdateFactory.newLatLngZoom(DEFAULT_LOCATION, 15);
         mMap.moveCamera(cameraUpdate);

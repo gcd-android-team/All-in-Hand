@@ -86,16 +86,16 @@ public class LoginActivity extends AppCompatActivity {
                 id = editTextID.getText().toString();
                 pw = editTextPW.getText().toString();
 
-                if(id.length() == 0 || pw.length() == 0) {
-                    Toast.makeText(LoginActivity.this, "Invalid Input", Toast.LENGTH_SHORT).show();
-                } else {
+                //if(id.length() == 0 || pw.length() == 0) {
+                  //  Toast.makeText(LoginActivity.this, "Invalid Input", Toast.LENGTH_SHORT).show();
+                //} else {
                     //sendPostRequest(id, pw);
                     //TODO:: POST request, goto Main only if POST request success
                     intent = new Intent(LoginActivity.this, MainActivity.class);
                     intent.putExtra("id", id);
                     startActivity(intent);
                     finish();
-                }
+                //}
             }
         });
 

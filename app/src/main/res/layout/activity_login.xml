@@ -51,12 +51,11 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_marginTop="40dp"
-                        android:background="@color/lightblue"
                         android:ems="10"
-                        android:hint="아이디를 입력하세요"
+                        android:hint="ID"
                         android:padding="10dp"
                         android:textColor="@color/black"
-                        android:textColorHint="@color/black" />
+                        android:textColorHint="@color/gray" />
 
                     <EditText
                         android:id="@+id/editTextPW"
@@ -64,20 +63,19 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_marginTop="10dp"
-                        android:background="@color/lightblue"
                         android:ems="10"
                         android:inputType="textPassword"
-                        android:hint="비밀번호를 입력하세요"
+                        android:hint="Password"
                         android:padding="10dp"
                         android:textColor="@color/black"
-                        android:textColorHint="@color/black" />
+                        android:textColorHint="@color/gray" />
 
                     <Button
                         android:id="@+id/buttonLogin"
                         android:layout_width="320dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:layout_marginTop="10dp"
+                        android:layout_marginTop="20dp"
                         android:background="@color/colorPrimary"
                         android:text="로그인"
                         android:fontFamily="@font/nanum_regular"
@@ -126,24 +124,24 @@
         </LinearLayout>
     </ScrollView>
 
-    <LinearLayout
-        android:id="@+id/linearLayout10"
-        android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:background="@color/colorPrimary"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/scrollView3">
+<!--    <LinearLayout-->
+<!--        android:id="@+id/linearLayout10"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="45dp"-->
+<!--        android:background="@color/colorPrimary"-->
+<!--        android:orientation="vertical"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/scrollView3">-->
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:layout_gravity="center"
-            android:text="Login "
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="30dp"
-            android:textStyle="bold" />
-    </LinearLayout>
+<!--        <TextView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="45dp"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:text="Login "-->
+<!--            android:textAlignment="center"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textSize="30dp"-->
+<!--            android:textStyle="bold" />-->
+<!--    </LinearLayout>-->
 </androidx.constraintlayout.widget.ConstraintLayout>

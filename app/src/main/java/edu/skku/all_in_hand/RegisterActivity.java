@@ -55,6 +55,9 @@ public class RegisterActivity extends AppCompatActivity {
                 if (onlyNumCheck(editTextID.getText().toString()) == true) {
                     Toast.makeText(RegisterActivity.this, "숫자로만 구성된 ID는 사용이 불가능합니다.", Toast.LENGTH_SHORT).show();
                 }
+                else{
+                    use_id=1;
+                }
             }
         });
 
@@ -74,6 +77,7 @@ public class RegisterActivity extends AppCompatActivity {
                 }
                 else {
                     //TODO POST DB
+                    Toast.makeText(RegisterActivity.this, "회원가입 성공!", Toast.LENGTH_SHORT).show();
                     intent = new Intent(RegisterActivity.this, LoginActivity.class);
                     startActivity(intent);
                     finish();
