@@ -2,12 +2,12 @@ package edu.skku.all_in_hand;
 
 public class MenuItem {
     public String name;
-    public String price;
+    public int price;
     public String desc;
 
     public MenuItem(){}
 
-    public MenuItem(String name, String price, String desc){
+    public MenuItem(String name, int price, String desc){
         this.name=name;
         this.price=price;
         this.desc=desc;
@@ -21,7 +21,7 @@ public class MenuItem {
         return name;
     }
 
-    public String getPrice() {
+    public int getPrice() {
         return price;
     }
 }

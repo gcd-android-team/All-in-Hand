@@ -2,11 +2,12 @@ package edu.skku.all_in_hand;
 
 public class MenuOption {
     public String name;
-    public String price;
+    public int price;
+    public boolean isSelected;
 
     public MenuOption(){}
 
-    public MenuOption(String name, String price){
+    public MenuOption(String name, int price){
         this.name=name;
         this.price=price;
     }
@@ -15,7 +16,24 @@ public class MenuOption {
         return name;
     }
 
-    public String getPrice() {
+    public int getPrice() {
         return price;
     }
+
+    public boolean isSelected() {
+        return isSelected;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
+    }
+
+    public void setSelected(boolean selected) {
+        isSelected = selected;
+    }
 }
+

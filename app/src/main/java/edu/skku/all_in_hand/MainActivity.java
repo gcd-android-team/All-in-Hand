@@ -210,6 +210,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             super.onLocationResult(locationResult);
             List<Location> locationList = locationResult.getLocations();
             if (locationList.size() > 0) {
+
+
+
                 location = locationList.get(locationList.size() - 1);
                 //location = locationList.get(0);
                 currentPosition
@@ -221,6 +224,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 //현재 위치에 마커 생성하고 이동
                 //setCurrentLocation(location, markerTitle, markerSnippet);
                 mCurrentLocatiion = location;
+
 
                 LatLng Store1 = new LatLng(37.49322, 127.0788);
                 MarkerOptions markerOptions1 = new MarkerOptions();
@@ -366,18 +370,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         //디폴트 위치, Seoul
         LatLng DEFAULT_LOCATION = new LatLng(37.56, 126.97);
-        String markerTitle = "위치정보 가져올 수 없음";
-        String markerSnippet = "위치 퍼미션과 GPS 활성 요부 확인하세요";
-
-        if (currentMarker != null) currentMarker.remove();
-        MarkerOptions markerOptions = new MarkerOptions();
-        markerOptions.position(DEFAULT_LOCATION);
-        markerOptions.title(markerTitle);
-        markerOptions.snippet(markerSnippet);
-        markerOptions.draggable(true);
-        markerOptions.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED));
-        //currentMarker = mMap.addMarker(markerOptions);
-
+        //location = locationList.get(0);
         CameraUpdate cameraUpdate = CameraUpdateFactory.newLatLngZoom(DEFAULT_LOCATION, 15);
         mMap.moveCamera(cameraUpdate);
 

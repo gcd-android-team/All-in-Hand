@@ -192,7 +192,7 @@
                     <TextView
                         android:layout_width="60dp"
                         android:layout_height="match_parent"
-                        android:text="수량"
+                        android:text="1"
                         android:gravity="center"
                         android:textColor="@color/black"
                         android:fontFamily="@font/nanum_bold"
@@ -233,7 +233,7 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:layout_margin="10dp"
-                android:text="주문하기"
+                android:text="장바구니 담기"
                 android:textSize="20dp"
                 android:fontFamily="@font/nanum_bold"
                 android:textColor="@color/white"

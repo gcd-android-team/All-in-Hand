@@ -61,23 +61,23 @@ public class ShowStoreInfoActivity extends AppCompatActivity {
             menulist.add(a);
         }
         */
-        MenuItem a = new MenuItem("가자미 미역국", 10000+"원", "당일 잡은 가자미 한마리가 통째로! 기력 회복에 딱");
+        MenuItem a = new MenuItem("가자미 미역국", 10000, "당일 잡은 가자미 한마리가 통째로! 기력 회복에 딱");
         menulist.add(a);
-        MenuItem a2 = new MenuItem("(특)가자미 미역국", 14000+"원", "가자미 두마리");
+        MenuItem a2 = new MenuItem("(특)가자미 미역국", 14000, "가자미 두마리");
         menulist.add(a2);
-        MenuItem a3 = new MenuItem("전복 미역국", 12000+"원", "깊게 우러난 전복 육수와 통전복");
+        MenuItem a3 = new MenuItem("전복 미역국", 12000, "깊게 우러난 전복 육수와 통전복");
         menulist.add(a3);
-        MenuItem a4 = new MenuItem("황태 미역국", 9000+"원", "해장에도 좋아요");
+        MenuItem a4 = new MenuItem("황태 미역국", 9000, "해장에도 좋아요");
         menulist.add(a4);
-        MenuItem a7 = new MenuItem("소고기 미역국", 10000+"원", "한우로 우러낸 육수, 깊은 맛");
+        MenuItem a7 = new MenuItem("소고기 미역국", 10000, "한우로 우러낸 육수, 깊은 맛");
         menulist.add(a7);
-        MenuItem a5 = new MenuItem("떡갈비", 12000+"원", "매콤달콤 매장에서 직접 빚은 떡갈비");
+        MenuItem a5 = new MenuItem("떡갈비", 12000, "매콤달콤 매장에서 직접 빚은 떡갈비");
         menulist.add(a5);
-        MenuItem a6 = new MenuItem("톳무침", 3000+"원", "오복미역의 베스트 사이드메뉴");
+        MenuItem a6 = new MenuItem("톳무침", 3000, "오복미역의 베스트 사이드메뉴");
         menulist.add(a6);
-        MenuItem a8 = new MenuItem("[A SET] 가자미 미역국 + 떡갈비", 20000+"원", "2000원 할인");
+        MenuItem a8 = new MenuItem("[A SET] 가자미 미역국 + 떡갈비", 20000, "2000원 할인");
         menulist.add(a8);
-        MenuItem a9 = new MenuItem("[B SET] (특)가자미 미역국 + 전복 미역국", 24000+"원", "2000원 할인, 음료수 서비스");
+        MenuItem a9 = new MenuItem("[B SET] (특)가자미 미역국 + 전복 미역국", 24000, "2000원 할인, 음료수 서비스");
         menulist.add(a9);
 
 

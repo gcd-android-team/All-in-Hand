@@ -65,7 +65,7 @@ public class MenuItemAdapter extends RecyclerView.Adapter<MenuItemAdapter.ViewHo
     public void onBindViewHolder(MenuItemAdapter.ViewHolder holder, int position) {
         MenuItem item = menuItems.get(position);
         holder.menudesc.setText(item.getDesc());
-        holder.menuprice.setText(item.getPrice());
+        holder.menuprice.setText(item.getPrice()+"원");
         holder.menuname.setText(item.getName());
     }
 

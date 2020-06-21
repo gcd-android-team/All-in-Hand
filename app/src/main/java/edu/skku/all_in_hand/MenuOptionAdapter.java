@@ -33,12 +33,12 @@ public class MenuOptionAdapter extends RecyclerView.Adapter<MenuOptionAdapter.Vi
 
     @NonNull
     @Override
-    public MenuOptionAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         Context context = parent.getContext() ;
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) ;
 
         View view = inflater.inflate(R.layout.recyclerview_menuoptions, parent, false) ;
-        MenuOptionAdapter.ViewHolder vh = new MenuOptionAdapter.ViewHolder(view) ;
+        ViewHolder vh = new ViewHolder(view) ;
 
         return vh ;
     }
