@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:id="@+id/scrollView2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <EditText
+                            android:id="@+id/phonenum"
+                            android:layout_width="320dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="100dp"
+                            android:background="@color/lightblue"
+                            android:hint="전화번호(010-XXXX-XXXX)"
+                            android:fontFamily="@font/nanum_bold"
+                            android:padding="10dp"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/gray" />
+                        <!--
+                        <LinearLayout
+                            android:layout_width="320dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal">
+
+                            <EditText
+                                android:id="@+id/editTextNickname"
+                                android:layout_width="230dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginRight="10dp"
+                                android:background="@color/lightblue"
+                                android:hint="닉네임"
+                                android:fontFamily="@font/nanum_bold"
+                                android:padding="10dp"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/gray" />
+
+                            <Button
+                                android:id="@+id/check_nickname"
+                                android:layout_width="80dp"
+                                android:layout_height="40dp"
+                                android:layout_gravity="center"
+                                android:text="중복체크"
+                                android:fontFamily="@font/nanum_bold"
+                                android:textColor="#FF8C00"
+                                android:textSize="15dp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                        -->
+
+                        <LinearLayout
+                            android:layout_width="320dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal">
+
+                            <EditText
+                                android:id="@+id/editTextID"
+                                android:layout_width="230dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginRight="10dp"
+                                android:background="@color/lightblue"
+                                android:hint="아이디"
+                                android:fontFamily="@font/nanum_bold"
+                                android:padding="10dp"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/gray" />
+
+                            <Button
+                                android:id="@+id/check_id"
+                                android:layout_width="80dp"
+                                android:layout_height="40dp"
+                                android:layout_gravity="center"
+                                android:text="중복체크"
+                                android:fontFamily="@font/nanum_bold"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="12.5dp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <EditText
+                            android:id="@+id/editTextPW"
+                            android:layout_width="320dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:background="@color/lightblue"
+                            android:hint="비밀번호"
+                            android:fontFamily="@font/nanum_bold"
+                            android:inputType="textPassword"
+                            android:padding="10dp"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/gray" />
+                        <!--
+                        <LinearLayout
+                            android:layout_width="320dp"
+                            android:layout_height="45dp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:text="성별"
+                                android:textAlignment="center"
+                                android:textSize="19dp"
+                                android:fontFamily="@font/nanum_bold"
+                                android:textStyle="bold"
+                                android:layout_gravity="center"/>
+
+                            <Spinner
+                                android:id="@+id/gender"
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"/>
+
+                            <TextView
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:text="학년"
+                                android:textAlignment="center"
+                                android:textSize="19dp"
+                                android:fontFamily="@font/nanum_bold"
+                                android:textStyle="bold"
+                                android:layout_gravity="center"/>
+
+                            <Spinner
+                                android:id="@+id/grade"
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center" />
+
+                        </LinearLayout>
+                        -->
+
+                        <EditText
+                            android:id="@+id/email"
+                            android:layout_width="320dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:background="@color/lightblue"
+                            android:hint="이메일"
+                            android:fontFamily="@font/nanum_bold"
+                            android:padding="10dp"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/gray" />
+
+                        <Button
+                            android:id="@+id/btn_register"
+                            android:layout_width="320dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:background="@color/colorPrimary"
+                            android:text="회원가입하기"
+                            android:fontFamily="@font/nanum_bold"
+                            android:textColor="#FFFFFF"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/linearLayout9"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/colorPrimary"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/scrollView2">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:text="Sign Up"
+                android:textAlignment="center"
+                android:textColor="#ffffff"
+                android:fontFamily="@font/nanum_bold"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
