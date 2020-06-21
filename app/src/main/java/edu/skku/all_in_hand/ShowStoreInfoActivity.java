@@ -1,11 +1,14 @@
 package edu.skku.all_in_hand;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.ShapeDrawable;
 import android.graphics.drawable.shapes.OvalShape;
 import android.os.Build;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -83,7 +86,22 @@ public class ShowStoreInfoActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         MenuItemAdapter adapter = new MenuItemAdapter(menulist);
+        adapter.setOnItemClickListener(new MenuItemAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(View v, int pos) {
+                Intent intent = new Intent(ShowStoreInfoActivity.this, ShowMenuInfoActivity.class);
+                intent.putExtra("menu_id", 5);
+                intent.putExtra("price", 10000);
+                startActivity(intent);
+                finish();
+            }
+        });
         recyclerView.setAdapter(adapter);
 
     }
+
+
+    private AdapterView.OnItemClickListener mListener = null;
+
+
 }

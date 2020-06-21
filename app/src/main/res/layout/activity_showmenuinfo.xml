@@ -24,7 +24,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:id="@+id/store_photo"
+                android:id="@+id/menu_photo"
+                android:padding="5dp"
                 />
 
             <LinearLayout
@@ -40,25 +41,77 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1.7"
-                    android:id="@+id/store_name"
+                    android:id="@+id/menu_name"
                     android:text="메뉴이름"
                     android:gravity="center|left"
                     android:textSize="25dp"
                     android:fontFamily="@font/nanum_bold"
+                    android:textColor="@color/black"
                     android:padding="15dp"
                     />
 
-                <TextView
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1.3"
-                    android:id="@+id/store_rate"
-                    android:text="메뉴평점"
-                    android:gravity="center|left"
-                    android:textSize="15dp"
-                    android:fontFamily="@font/nanum_bold"
-                    android:padding="15dp"
-                    />
+                    android:orientation="horizontal"
+                    android:padding="5dp"
+                    android:weightSum="7"
+                    >
+
+                    <ImageView
+                        android:id="@+id/star1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:padding="5dp"
+                        android:src="@drawable/star_full"/>
+
+                    <ImageView
+                        android:id="@+id/star2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:padding="5dp"
+                        android:src="@drawable/star_full"/>
+
+                    <ImageView
+                        android:id="@+id/star3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/star_full"
+                        android:layout_weight="1"
+                        android:padding="5dp"/>
+
+                    <ImageView
+                        android:id="@+id/star4"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/star_full"
+                        android:layout_weight="1"
+                        android:padding="5dp"/>
+
+                    <ImageView
+                        android:id="@+id/star5"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/star_empty"
+                        android:layout_weight="1"
+                        android:padding="5dp"/>
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:id="@+id/menu_rate"
+                        android:text="메뉴평점"
+                        android:gravity="center|left"
+                        android:textSize="15dp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/nanum_bold"/>
+                </LinearLayout>
 
             </LinearLayout>
         </LinearLayout>
@@ -67,11 +120,12 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="2"
-            android:id="@+id/store_desc"
+            android:id="@+id/menu_desc"
             android:gravity="center|left"
             android:textSize="15dp"
-            android:fontFamily="@font/nanum_bold"
+            android:fontFamily="@font/nanum_regular"
             android:text="메뉴 설명"
+            android:textColor="@color/black"
             android:padding="15dp"
             />
 
@@ -92,8 +146,9 @@
             android:layout_height="0dp"
             android:layout_weight="5"
             android:padding="15dp"
-            android:id="@+id/menurecycler"
+            android:id="@+id/optionrecycler"
             android:scrollbars="vertical"
+            android:background="@color/lightgray"
             />
 
         <LinearLayout
@@ -131,6 +186,7 @@
                         android:layout_gravity="center"
                         android:gravity="center"
                         android:layout_margin="5dp"
+                        android:id="@+id/minus"
                         />
 
                     <TextView
@@ -139,6 +195,7 @@
                         android:text="수량"
                         android:gravity="center"
                         android:textColor="@color/black"
+                        android:fontFamily="@font/nanum_bold"
                         android:id="@+id/quantity"
                         android:textSize="20dp"/>
 
@@ -151,6 +208,7 @@
                         android:layout_gravity="center"
                         android:gravity="center"
                         android:layout_margin="5dp"
+                        android:id="@+id/plus"
                         />
 
                 </LinearLayout>
@@ -162,6 +220,7 @@
                     android:id="@+id/price"
                     android:text="10000원"
                     android:gravity="center"
+                    android:fontFamily="@font/nanum_regular"
                     android:padding="5dp"
                     android:textSize="20dp"
                     android:textColor="@color/black"
@@ -179,6 +238,7 @@
                 android:fontFamily="@font/nanum_bold"
                 android:textColor="@color/white"
                 android:background="@color/colorPrimary"
+                android:id="@+id/order"
                 />
         </LinearLayout>
 

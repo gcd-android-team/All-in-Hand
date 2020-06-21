@@ -13,6 +13,7 @@ import java.util.ArrayList;
 public class MenuItemAdapter extends RecyclerView.Adapter<MenuItemAdapter.ViewHolder> {
 
     private ArrayList<MenuItem> menuItems = null ;
+    private OnItemClickListener mListener = null;
 
     // 아이템 뷰를 저장하는 뷰홀더 클래스.
     public class ViewHolder extends RecyclerView.ViewHolder {
@@ -25,6 +26,20 @@ public class MenuItemAdapter extends RecyclerView.Adapter<MenuItemAdapter.ViewHo
             menuname = itemView.findViewById(R.id.menuname);
             menuprice = itemView.findViewById(R.id.menuprice);
             menudesc = itemView.findViewById(R.id.menudesc);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    int position = getAdapterPosition();
+
+                    if(position != RecyclerView.NO_POSITION){
+                        if(mListener !=null){
+                            mListener.onItemClick(v,position);
+                        }
+                    }
+
+                }
+            });
         }
     }
 
@@ -58,6 +73,16 @@ public class MenuItemAdapter extends RecyclerView.Adapter<MenuItemAdapter.ViewHo
     @Override
     public int getItemCount() {
         return menuItems.size() ;
+    }
+
+    public interface OnItemClickListener{
+        void onItemClick(View v, int pos);
+    }
+
+    // OnItemClickListener 객체 참조를 어댑터에 전달하는 메서드
+    public void setOnItemClickListener(OnItemClickListener listener)
+    {
+        this.mListener = listener;
     }
 }
 

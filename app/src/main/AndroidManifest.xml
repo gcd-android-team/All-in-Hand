@@ -25,6 +25,7 @@
         <activity android:name=".RegisterActivity"/>
         <activity android:name=".MainActivity"/>
         <activity android:name=".ShowStoreInfoActivity"/>
+        <activity android:name=".ShowMenuInfoActivity"/>
     <meta-data
         android:name="com.google.android.geo.API_KEY"
         android:value="AIzaSyAIB-wqKFZvdCkenHhTwJTOYg2tGZr7h14"
