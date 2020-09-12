@@ -28,7 +28,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:padding="20dp"
-        android:text="TextView"
+        android:text="가자미 미역국 - 수량: 2개"
         android:background="@color/lightgray"
         android:fontFamily="@font/nanum_regular"
         android:textSize="15dp"

@@ -19,10 +19,10 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.ProtocolException;
 import java.net.URL;
-
+/*
 public class ConnectServer {
 
-    /*
+
     TextView showJSON;
     Button showJSONbutton;
     String REQUEST_URL ="http://54.180.99.61:8080/stores/test2";
@@ -69,7 +69,7 @@ public class ConnectServer {
     }
 
 
-    public void getJSON() {
+    public void getJSON(String R_URL) {
         Thread thread = new Thread(new Runnable() {
             public void run() {
                 String result="";
@@ -97,7 +97,7 @@ public class ConnectServer {
 
 
                     InputStreamReader inputStreamReader = new InputStreamReader(inputStream, "UTF-8");
-                    /*
+
                     BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
 
                     StringBuilder sb = new StringBuilder();
@@ -128,5 +128,6 @@ public class ConnectServer {
         thread.start();
     }
 
-        */
 }
+
+*/
